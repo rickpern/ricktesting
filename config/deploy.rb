@@ -44,6 +44,8 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, '2.2.3'
 
+set :passenger_roles, :web
+
 namespace :deploy do
 
   after :restart, :clear_cache do
